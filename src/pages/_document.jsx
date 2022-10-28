@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 const Document = () => {
   return (
     <Html>
-        <link rel="shortcut icon" href="/logo.png" />
+        <link rel="icon" href="/logo.png" />
         <title>Vem-Pra-Quadra</title>
       <Head/>
       <body>

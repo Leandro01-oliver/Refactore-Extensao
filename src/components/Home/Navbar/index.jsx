@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
-import LogoNav from "./LogoNav";
-import NavLink from "./NavLink";
+import LogoNav from "./NavLogo";
+import NavLink from "./NavLink"
 
 const NavBar = () =>{
 
