@@ -71,6 +71,9 @@ const CreatePermissao = () =>{
                   <Select
                   onChange={onChangeTipo}
                   >
+                    <option value='Selecione uma permissão' disabled selected>
+                    Selecione uma permissão
+                    </option>
                     <option value='usuario'>
                       usuario
                     </option>

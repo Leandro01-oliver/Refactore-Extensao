@@ -1,16 +1,18 @@
 
-class likeController{
+class LikeController{
 
-    getLikeAll(){
-
+    async getLikeAll(){
+        await getLikeAllRepository();
     }
 
-    getLikeId(id){
-        
+    async getLikeById(id){
+        await getLikeByIdRepository(id);
     }
 
-    postLike(description){
-       postLikeRepository(description);
+    async postLike(description){
+       await postLikeRepository(description);
     }
 
 }
+
+export { LikeController }

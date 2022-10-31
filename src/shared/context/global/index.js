@@ -6,9 +6,17 @@ const ContextGlobalProvider = ({ children }) => {
 
     const [tipo, setTipo] = useState("");
     const [email, setEmail] = useState("");
-    const [modal,setModal] = useState(false);
-    
-    const handlerModal = () => setModal(!modal);
+    const [perfil,setPerfil] = useState(false);
+    const [login,setlogin] = useState(false);
+    const [menu,setMenu] = useState(false);
+    const [darkMode,setDarkMode] = useState(false);
+    const [dropPerfil,setDropPerfil] = useState(false);
+
+    const handlerPerfil = () => setPerfil(!perfil);
+    const handlerLogin = () => setlogin(!login);
+    const handlerMenu = () => setMenu(!menu);
+    const handlerDarkMode = () => setDarkMode(!darkMode);
+    const handlerDropPerfil = () => setDropPerfil(!dropPerfil);
 
     const onChangeTipo = (e) => {
         setTipo(e.target.value)
@@ -18,13 +26,22 @@ const ContextGlobalProvider = ({ children }) => {
         setEmail(e.target.value)
     }
 
+
   const value = {
-    handlerModal,
-    modal,
+    handlerPerfil,
+    perfil,
+    handlerLogin,
+    login,
     onChangeTipo,
     onChangeEmail,
     tipo,
-    email
+    email,
+    menu,
+    handlerMenu,
+    darkMode,
+    handlerDarkMode,
+    handlerDropPerfil,
+    dropPerfil
   }
 
   return (

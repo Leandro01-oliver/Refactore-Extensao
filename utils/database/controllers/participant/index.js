@@ -1,16 +1,18 @@
 
-class participantController{
+class ParticipantController{
 
-    getParticipantAll(){
-
+    async getParticipantAll(){
+        await getParticipantAllRepository();
     }
 
-    getParticipantId(id){
-        
+    async getParticipantById(id){
+        await getParticipantByIdRepository(id);
     }
 
-    postParticipant(description){
-       postParticipantRepository(description);
+    async postParticipant(description){
+       await postParticipantRepository(description);
     }
 
 }
+
+export { ParticipantController }

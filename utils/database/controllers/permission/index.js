@@ -2,12 +2,12 @@ import { postPermissionRepository } from "../../repositorys/permission/post";
 
 class PermissionController{
 
-    getPermissionAll(){
-
+    async getPermissionAll(){
+        await getPermissionAllRepository();
     }
 
-    getPermissionId(id){
-        
+    async getPermissionById(id){
+        await getPermissionByIdRepository(id);
     }
 
     async postPermission(type, active, email){

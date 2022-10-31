@@ -1,18 +1,19 @@
 import { postEventRepository } from "../../repositorys/event/post";
 
-class eventController{
+class EventController{
 
-    getEventAll(){
-
+    async getEventAll(){
+        await getEventAllRepository();
     }
 
-    getEventId(id){
-        
+    async getEventById(id){
+        await getEventByIdRepository(id);
     }
 
-    
-    postEvent(image, start_date, end_date, start_hour, end_hour, title, description, cep , country , state, andress, district , active){
-       postEventRepository(image, start_date, end_date, start_hour, end_hour, title, description, cep , country , state, andress, district , active);
+    async postEvent(image, start_date, end_date, start_hour, end_hour, title, description, cep , country , state, andress, district , active){
+       await postEventRepository(image, start_date, end_date, start_hour, end_hour, title, description, cep , country , state, andress, district , active);
     }
 
 }
+
+export { EventController }

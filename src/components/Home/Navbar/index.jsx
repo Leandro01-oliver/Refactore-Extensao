@@ -1,6 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
-import LogoNav from "./NavLogo";
+import Logo from "../../Logo";
 import NavLink from "./NavLink"
+import ProfileNavLink from "./NavLink/Profile";
 
 const NavBar = () =>{
 
@@ -12,9 +13,10 @@ const NavBar = () =>{
               alignItems={'center'}
               px={'1rem'}
               justifyContent={'space-between'}
+              bg={'yellow'}
               borderBottom={'2px solid #000'}
             >
-                <LogoNav/>
+                <Logo/>
                 <Box>
                   <NavLink/>
                 </Box>

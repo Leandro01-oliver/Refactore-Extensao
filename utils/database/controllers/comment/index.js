@@ -1,12 +1,12 @@
 
 class CommentController{
 
-    getCommentAll(){
-
+    async getCommentAll(){
+        await getCommentAllRepository();
     }
 
-    getCommentId(id){
-        
+    async getCommentById(id){
+        await getCommentByIdRepository(id);
     }
 
     postComment(description){
@@ -14,3 +14,5 @@ class CommentController{
     }
 
 }
+
+export { CommentController }
